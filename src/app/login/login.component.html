@@ -1,0 +1,11 @@
+
+<div class="text-white ms-2 p-2">
+    <h1 class="heading">{{aim}}</h1>
+</div>
+<div id="f1" class=" p-5  mt-8  w-50 text-center ">
+    <h2 class="head">Login</h2>
+    <input id="acid" class="form-control mt-3" type="text" [placeholder]="data" name="acno" #acno>
+    <input id="pid" class="form-control mt-3"  type="password" placeholder=" Enter password" name="psw" #psw>
+    <button id="login" (click)="login(acno,psw)" type="submit"  class="btn btn-success mt-2">login</button>
+    <a class="reg" href="">Register here?</a>
+    </div>
