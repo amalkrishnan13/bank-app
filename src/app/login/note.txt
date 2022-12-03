@@ -1,3 +1,4 @@
+git-- a1
 data binding in angular
 -----------------------
 
@@ -15,4 +16,15 @@ method 1- one way binding  (share data in one direction)
     1.2.2-- event binding using $ event    (event name)="methodname($event)"
     1.2.3-- evnet binding using template rendering varibale     #varibale
 
-    
+method 2- two way binding
+  2.1-- ngmodel     Formsmodule 
+              [(ngmodel)]="value"
+
+
+Redirection in angular
+----------------------
+
+navigateByUrl -- method uesd to Redirection
+
+Router        -- class
+AppRoutingModule -- module
