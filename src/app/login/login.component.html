@@ -2,10 +2,12 @@
 <div class="text-white ms-2 p-2">
     <h1 class="heading">{{aim}}</h1>
 </div>
+<form (ngSubmit)="login()">
 <div id="f1" class=" p-5  mt-8  w-50 text-center ">
     <h2 class="head">Login</h2>
     <input id="acid" class="form-control mt-3" type="text" [placeholder]="data" name="acno" [(ngModel)]="acno">
     <input id="pid" class="form-control mt-3"  type="password" placeholder=" Enter password" name="psw" [(ngModel)]="psw">
-    <button id="login" (click)="login()" type="submit"  class="btn btn-success mt-2">login</button>
-    <a class="reg" href="">Register here?</a>
+    <button id="login"  type="submit"  class="btn btn-success mt-2">login</button>
+    <a routerLink="register" class="reg" href="">Register here?</a>
     </div>
+</form>

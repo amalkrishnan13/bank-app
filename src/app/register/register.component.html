@@ -1,0 +1,14 @@
+<!-- username 
+acno 
+password -->
+<form (ngsubmit)="register()">
+<div id="f1" class=" p-5  mt-8  w-50 text-center ">
+    <h2 class="head">Register</h2>
+    <input id="acid" class="form-control mt-3" type="text" placeholder="enter username" name="uname" [(ngModel)]="uname">
+    <input id="pid" class="form-control mt-3"  type="password" placeholder=" acnumber" name="acno"  [(ngModel)]="acno">
+
+    <input id="pid" class="form-control mt-3"  type="password" placeholder=" Enter password" name="psw"  [(ngModel)]="psw" >
+    <button id="login" type="submit"  class="btn btn-success mt-2">register</button>
+
+    </div>
+</form>
