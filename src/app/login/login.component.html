@@ -1,13 +1,32 @@
-
 <div class="text-white ms-2 p-2">
     <h1 class="heading">{{aim}}</h1>
 </div>
-<form (ngSubmit)="login()">
-<div id="f1" class=" p-5  mt-8  w-50 text-center ">
-    <h2 class="head">Login</h2>
-    <input id="acid" class="form-control mt-3" type="text" [placeholder]="data" name="acno" [(ngModel)]="acno">
-    <input id="pid" class="form-control mt-3"  type="password" placeholder=" Enter password" name="psw" [(ngModel)]="psw">
-    <button id="login"  type="submit"  class="btn btn-success mt-2">login</button>
-    <a routerLink="register" class="reg" href="">Register here?</a>
+<form (ngSubmit)="login()" [formGroup]="loginForm">
+    <div class=" container w-25 border p-3  mt-5 " style="background: rgba(255, 255, 255, 0.112); border-radius: 25px;">
+        <h2 class="text-center text-white">Login</h2>
+        <div class="mt-2 p-2">
+            <input id="acno" class="form-control mt-3" type="text" [placeholder]="data" name="acno"
+                formControlName="acno">
+        </div>
+
+        <div *ngIf="this.loginForm.get('acno')?.errors && this.loginForm.get('acno')?.touched">
+            <p class="text-danger">invalid acnumber</p>
+        </div>
+
+        <div class="mt-2 p-2">
+            <input id="psw" class="form-control mt-3" type="password" placeholder=" Enter password" name="psw"
+                formControlName="psw">
+        </div>
+
+        <div *ngIf="this.loginForm.get('psw')?.errors && this.loginForm.get('psw')?.touched">
+            <p class="text-danger">invalid password</p>
+        </div>
+
+        <div class="text-center mt-2 p-2">
+            <button id="login" type="submit" class="btn btn-success mt-2">login</button>
+        </div>
+        <div class="text-center ">
+            <a routerLink="register" class="reg" href="">Register here?</a>
+        </div>
     </div>
 </form>

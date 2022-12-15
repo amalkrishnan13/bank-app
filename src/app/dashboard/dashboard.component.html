@@ -4,38 +4,38 @@
 </div>
 
 
-<form (ngSubmit)="deposit()">
+<form (ngSubmit)="deposit()" [formGroup]="depositForm">
     <div class="container w-50 border mt-1 p-3" style="background: rgb(255, 255, 255, 0.244); border-radius: 25px;">
         <h1 class="text-center text-white">Deposit</h1>
 
 
     <div class="mt-2 p-2">
-        <input name="acno" [(ngModel)]="acno" type="text" placeholder="acnumber" id="acno" class="form-control">
+        <input name="acno" formControlName="acno" type="text" placeholder="acnumber" id="acno" class="form-control">
     </div>
     <div class="mt-2 p-2">
-        <input name="psw"  [(ngModel)]="psw" type="text" placeholder="password" id="psw" class="form-control">
+        <input name="psw"  formControlName="psw" type="text" placeholder="password" id="psw" class="form-control">
     </div>
     <div class="mt-2 p-2">
-        <input name="amount"  [(ngModel)]="amnt" type="text" placeholder="amount" id="amnt" class="form-control">
+        <input name="amount"  formControlName="amnt" type="text" placeholder="amount" id="amnt" class="form-control">
     </div>
     <div class="text-center mt-2 p-2">
     <button type="submit" class="btn btn-success mt-3 " >deposit</button>
 </div>
   </div>
 </form>
-<form (ngSubmit)="withdraw()">
+<form (ngSubmit)="withdraw()" [formGroup]="withdrawForm">
     <div class="container w-50 border mt-5 p-3" style="background: rgba(255, 255, 255, 0.244); border-radius: 25px;">
         <h1 class="text-center text-white">withdraw</h1>
 
 
     <div class="mt-2 p-2">
-        <input type="text"  [(ngModel)]="acno1" placeholder="acnumber" name="a1" id="acno1" class="form-control">
+        <input type="text" formControlName="acno1" placeholder="acnumber" name="a1" id="acno1" class="form-control">
     </div>
     <div class="mt-2 p-2">
-        <input type="text"  [(ngModel)]="psw1" placeholder="password" name="b1" id="psw1" class="form-control">
+        <input type="text"  formControlName="psw1" placeholder="password" name="b1" id="psw1" class="form-control">
     </div>
     <div class="mt-2 p-2">
-        <input type="text"  [(ngModel)]="amnt1" placeholder="amount" name="c1" id="amnt1" class="form-control">
+        <input type="text"  formControlName="amnt1" placeholder="amount" name="c1" id="amnt1" class="form-control">
     </div>
     <div class="text-center mt-2 p-2">
         <button type="submit" class="btn btn-success mt-3 " >withdraw</button>

@@ -50,7 +50,9 @@ for create service -- ng g s servicename
 Angular directives
 ------------------
 1- structural directives - to handle structured datas in view of a component
+
     -- ngFor :can directly apply in html to access elements form array
+    -- ngIf  ;to check a condition in html
 
 
 Form Validation in angular
@@ -60,3 +62,39 @@ we can create forms in 2 ways
 1. Template driven form
 
 2. Model driven form
+     -Reactive form
+     --------------
+
+     ReactiveFormsModule  -- module used to create model form
+     FormBuilder          -- class of ReactiveFormsModule
+               --form contain  group,array,control
+
+
+validate model form
+--------------------
+validator  - a class ina angular which includes methods for apply Validation  
++ -- min count 1, max count goes on
+* -- min count 0, max count ---
+[^0-9] -- except  numbers -- ^ means except
+[^0-9a-zA-Z]  -- special characters
+
+
+access errors in validator rule
+    this.registerForm.get('uname')?.errors
+               -valid    - empty response
+               -invalid  - content
+
+    if(this.registerForm.get('uname')?.errors){      // *ngIf
+
+    }   
+
+
+
+local storage in angular
+------------------------
+
+- store    localStorage.setItem()
+-access    localstorage.getItem()
+-delete    localStorage.removeItem()
+
+
